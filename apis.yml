@@ -1,7 +1,29 @@
 aid: teachstreet
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/teachstreet.png
 name: TeachStreet
-description: TeachStreet is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  TeachStreet was an online learning marketplace that, in its own words,
+  "helps people find great classes, courses, teachers, and instructors who help
+  them learn new things," while "teachers use TeachStreet to find more students"
+  (teachstreet.com homepage, archived June 2011). Surfaced in the API Evangelist
+  network as a 500 Global portfolio company, TeachStreet was acquired by Amazon
+  on February 2, 2012 and subsequently wound down. The teachstreet.com domain is
+  now a dormant, Amazon-controlled brand-protection asset — MarkMonitor
+  nameservers, a locked-down mail posture (SPF "v=spf1 -all", DMARC "p=reject"
+  reporting to dmarc.amazon.com), and no A/AAAA/MX records — so there is no live
+  website, developer portal, or API surface to enrich. This record is retained
+  as a historical, defunct-company profile.
 url: https://raw.githubusercontent.com/api-evangelist/teachstreet/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +31,18 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: defunct
+x-status-detail: Acquired by Amazon 2012-02-02 and shut down; teachstreet.com dormant under Amazon/MarkMonitor control.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Education
+- Online Learning
+- Marketplace
+- Classes
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +50,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/teachstreet-domain-security.yml
 - type: Website
   url: https://teachstreet.com
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
